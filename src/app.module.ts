@@ -5,6 +5,7 @@ import { MovieModule } from './movie/movie.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { getTypeOrmConfig } from './config/typeorm.config';
+import { ReviewModule } from './review/review.module';
 
 
 
@@ -19,7 +20,7 @@ import { getTypeOrmConfig } from './config/typeorm.config';
       useFactory: getTypeOrmConfig,
       inject: [ConfigService],
   }), 
-  MovieModule,],
+  MovieModule, ReviewModule,],
   controllers: [AppController],
   providers: [AppService],
 })
