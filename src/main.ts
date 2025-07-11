@@ -7,6 +7,8 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
 
+  // app.setGlobalPrefix('api') // все будет идти с префикосм api
+
   await app.listen(3000);
 }
 bootstrap();
